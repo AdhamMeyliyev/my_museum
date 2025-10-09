@@ -14,6 +14,7 @@
 	align-items: center;
 	justify-content: space-between;
 	background-color: grey;
+	padding: 10px;
 
 	.header_logo {
 		color: $header-logo;
@@ -28,25 +29,91 @@
 			align-items: center;
 			gap: 50px;
 
-			.nav_item {
+			.nav_item_link {
 				font-size: $first-font + 2;
 				color: $full-white;
 				font-weight: 700;
-				border-bottom: 5px solid transparent;
 				padding: 5px;
+				position: relative; // muhim!
+				display: inline-block;
 				transition: all 0.4s ease-in;
+
+				// hoverdagi border animatsiyasi uchun
+				&::after {
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					width: 100%;
+					height: 3px;
+					background: #d8313f;
+					background: linear-gradient(
+						170deg,
+						rgba(216, 49, 63, 1) 30%,
+						rgba(245, 108, 61, 1) 70%
+					);
+					transform: scaleX(0);
+					transform-origin: center;
+					transition: transform 0.4s ease-in-out;
+					border-radius: 20px;
+				}
+
+				&:hover::after {
+					transform: scaleX(1);
+				}
 
 				&:hover {
 					font-weight: 900;
-					border-bottom: 5px solid red;
-					border-radius: 20px;
-					transition: all 0.4s ease-in-out;
 					cursor: pointer;
 				}
 
-				&:active{
-					opacity: .6	;
+				&:active {
+					opacity: 0.6;
 				}
+			}
+		}
+	}
+
+	.login_btn {
+		display: flex;
+		align-items: center;
+		gap: 33px;
+		font-family: 'Work Sans', sans-serif;
+		.signIn_btn {
+			font-size: $first-font;
+			display: block;
+			font-weight: bold;
+			color: $full-white;
+			border-bottom: 2px solid transparent;
+			transition: all 0.4s ease-in-out;
+			border-radius: 2px;
+
+			&:hover {
+				border-bottom: 2px solid $full-white;
+				transition: all 0.4s ease-in;
+				border-radius: 2px;
+			}
+		}
+
+		.signUp_btn {
+			padding: 16px 25px;
+			font-size: $first-font;
+			color: $full-white;
+			font-weight: bold;
+			background: #d8313f;
+			background: linear-gradient(
+				90deg,
+				rgba(216, 49, 63, 1) 30%,
+				rgba(245, 108, 61, 1) 70%
+			);
+			border-radius: 18px;
+			border: 2px solid #d8313f;
+			transition: all 0.4s ease-in-out;
+
+			&:hover {
+				box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+				transition: all 0.4s ease-in-out;
+				transform: translateY(-1px);
 			}
 		}
 	}

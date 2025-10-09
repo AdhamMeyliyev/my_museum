@@ -1,0 +1,28 @@
+// Clicker Script font
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
+
+// Work Sans font
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+// Full Colors
+@import '/src/colors/FullColors.scss';
+.header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.header_logo{
+		color: $header-logo;
+		font-size: 35px;
+		font-family: 'Clicker Script',  cursive;
+		font-weight: 800;
+	}
+
+	.navbar{
+		.nav_list{
+			display:flex;
+			align-items: center;
+			gap:50px;
+		}
+	}
+}

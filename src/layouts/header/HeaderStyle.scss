@@ -6,23 +6,48 @@
 
 // Full Colors
 @import '/src/colors/FullColors.scss';
-.header{
+
+// Full fonts
+@import '/src/fonts/FullFonts.scss';
+.header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	background-color: grey;
 
-	.header_logo{
+	.header_logo {
 		color: $header-logo;
 		font-size: 35px;
-		font-family: 'Clicker Script',  cursive;
+		font-family: 'Clicker Script', cursive;
 		font-weight: 800;
 	}
 
-	.navbar{
-		.nav_list{
-			display:flex;
+	.navbar {
+		.nav_list {
+			display: flex;
 			align-items: center;
-			gap:50px;
+			gap: 50px;
+
+			.nav_item {
+				font-size: $first-font + 2;
+				color: $full-white;
+				font-weight: 700;
+				border-bottom: 5px solid transparent;
+				padding: 5px;
+				transition: all 0.4s ease-in;
+
+				&:hover {
+					font-weight: 900;
+					border-bottom: 5px solid red;
+					border-radius: 20px;
+					transition: all 0.4s ease-in-out;
+					cursor: pointer;
+				}
+
+				&:active{
+					opacity: .6	;
+				}
+			}
 		}
 	}
 }

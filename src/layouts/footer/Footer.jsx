@@ -1,7 +1,7 @@
 import './FooterStyle.scss'
 
 const Footer = () => {
-	return <div className='footer'>Footer</div>
+	return <div className='container'>Footer</div>
 }
 
 export default Footer

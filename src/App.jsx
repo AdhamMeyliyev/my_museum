@@ -1,6 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import './App.scss'
 import Layout from './layouts/layout/Layout'
+import About from './pages/about/About'
 
 // Sahifalar
 // import Home from "./pages/Home";
@@ -15,11 +16,10 @@ import Layout from './layouts/layout/Layout'
 const App = () => {
 	return (
 		<Router>
-			<Layout>
-				<Routes>
-					<Route path='/' element={<Layout><h1>salom</h1></Layout>} />
-				</Routes>
-			</Layout>
+			<Routes>
+				<Route path='/' element={<Layout><h1>salom</h1></Layout>} />
+				<Route path='/about' element={<About/>} />
+			</Routes>
 		</Router>
 	)
 }

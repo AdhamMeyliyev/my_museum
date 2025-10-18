@@ -16,22 +16,34 @@ const Header = () => {
 				<nav className='navbar'>
 					<ol className='nav_list'>
 						<li className='nav_item'>
-							<Link className='nav_item_link' to='/'>Home</Link>
+							<Link className='nav_item_link' to='/'>
+								Home
+							</Link>
 						</li>
 						<li className='nav_item'>
-							<Link className='nav_item_link' to='/about'>About Us</Link>
+							<Link className='nav_item_link' to='/about'>
+								About Us
+							</Link>
 						</li>
 						<li className='nav_item'>
-							<Link className='nav_item_link' to='/destinations'>Destinations</Link>
+							<Link className='nav_item_link' to='/destinations'>
+								Destinations
+							</Link>
 						</li>
 						<li className='nav_item'>
-							<Link className='nav_item_link' to='/tours'>Tours</Link>
+							<Link className='nav_item_link' to='/tours'>
+								Tours
+							</Link>
 						</li>
 						<li className='nav_item'>
-							<Link className='nav_item_link' to='/shop'>Shop</Link>
+							<Link className='nav_item_link' to='/shop'>
+								Shop
+							</Link>
 						</li>
 						<li className='nav_item'>
-							<Link className='nav_item_link' to='/blogs'>Blogs</Link>
+							<Link className='nav_item_link' to='/blogs'>
+								Blogs
+							</Link>
 						</li>
 					</ol>
 				</nav>
@@ -46,6 +58,8 @@ const Header = () => {
 						Sign Up
 					</Link>
 				</div>
+
+				
 			</header>
 		</div>
 		// Header end

@@ -11,7 +11,7 @@ const Hero = () => {
 
 					try {
 						const res = await fetch(
-							`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=435e2d76efd94d2281df127bd06bd3f3&language=en`
+							`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=435e2d76efd94d2281df127bd06bd3f3&language=uz`
 						)
 						const data = await res.json()
 						if (data.results.length > 0) {

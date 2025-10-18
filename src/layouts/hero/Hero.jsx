@@ -3,6 +3,14 @@ import './HeroStyle.scss'
 
 const Hero = () => {
 	const [locationName, setLocationName] = useState('Loading...')
+	 const today = new Date();
+
+  // Format: 13 May, 2023
+  const formattedDate = today.toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  });
 	useEffect(() => {
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(
@@ -16,8 +24,7 @@ const Hero = () => {
 						const data = await res.json()
 						if (data.results.length > 0) {
 							const place = data.results[0].components
-							const city =
-								place.city
+							const city = place.city
 							// const country = place.country
 							setLocationName(`${city ? city + ' ' : ''}`)
 						} else {
@@ -62,9 +69,11 @@ const Hero = () => {
 
 					<div className='date_wrapper'>
 						<i class='fa-solid fa-calendar'></i>
-						<span className='location_title_wrapper'>
-							<h3 className='location_top_title'>Date</h3>
-							<h2 className='location_bottom_title'>Thailand</h2>
+						<span className='date_title_wrapper'>
+							<h3 className='date_top_title'>Date</h3>
+							<h3 className='date_top_title'>Date</h3>
+							<h2 className='date_top_title'>{formattedDate}</h2>
+							
 						</span>
 					</div>
 				</div>

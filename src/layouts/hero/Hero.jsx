@@ -71,7 +71,6 @@ const Hero = () => {
 						<i class='fa-solid fa-calendar'></i>
 						<span className='date_title_wrapper'>
 							<h3 className='date_top_title'>Date</h3>
-							<h3 className='date_top_title'>Date</h3>
 							<h2 className='date_top_title'>{formattedDate}</h2>
 							
 						</span>

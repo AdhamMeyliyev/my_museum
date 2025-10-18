@@ -1,77 +1,112 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './HeaderStyle.scss'
-import "./HeaderRWDStyle.scss"
+import './HeaderRWDStyle.scss'
 
 const Header = () => {
-	const [menuActive, setMenuActive] = useState(false)
+ const [menuActive, setMenuActive] = useState(false);
 
-	// menyu bosilganda yopiladigan funksiya
-	const closeMenu = () => setMenuActive(false)
+	// menyu yopish funksiyasi
+	const closeMenu = () => setMenuActive(false);
 
 	return (
 		<div className='container'>
 			<header className='header'>
 				{/* Header Logo */}
-				<Link className='header_logo' to='/' onClick={closeMenu}>
+				<NavLink className='header_logo' to='/' onClick={closeMenu}>
 					Kashkadarya Travel
-				</Link>
+				</NavLink>
 
-				{/* Navbar start */}
+				{/* Navbar */}
 				<nav className={`navbar ${menuActive ? 'active' : ''}`}>
 					<ol className='nav_list'>
 						<li className='nav_item'>
-							<Link className='nav_item_link' to='/' onClick={closeMenu}>
+							<NavLink
+								to='/'
+								className={({ isActive }) =>
+									isActive ? 'nav_item_link active' : 'nav_item_link'
+								}
+								onClick={closeMenu}
+							>
 								Home
-							</Link>
+							</NavLink>
 						</li>
 						<li className='nav_item'>
-							<Link className='nav_item_link' to='/about' onClick={closeMenu}>
+							<NavLink
+								to='/about'
+								className={({ isActive }) =>
+									isActive ? 'nav_item_link active' : 'nav_item_link'
+								}
+								onClick={closeMenu}
+							>
 								About Us
-							</Link>
+							</NavLink>
 						</li>
 						<li className='nav_item'>
-							<Link className='nav_item_link' to='/destinations' onClick={closeMenu}>
+							<NavLink
+								to='/destinations'
+								className={({ isActive }) =>
+									isActive ? 'nav_item_link active' : 'nav_item_link'
+								}
+								onClick={closeMenu}
+							>
 								Destinations
-							</Link>
+							</NavLink>
 						</li>
 						<li className='nav_item'>
-							<Link className='nav_item_link' to='/tours' onClick={closeMenu}>
+							<NavLink
+								to='/tours'
+								className={({ isActive }) =>
+									isActive ? 'nav_item_link active' : 'nav_item_link'
+								}
+								onClick={closeMenu}
+							>
 								Tours
-							</Link>
+							</NavLink>
 						</li>
 						<li className='nav_item'>
-							<Link className='nav_item_link' to='/shop' onClick={closeMenu}>
+							<NavLink
+								to='/shop'
+								className={({ isActive }) =>
+									isActive ? 'nav_item_link active' : 'nav_item_link'
+								}
+								onClick={closeMenu}
+							>
 								Shop
-							</Link>
+							</NavLink>
 						</li>
 						<li className='nav_item'>
-							<Link className='nav_item_link' to='/blogs' onClick={closeMenu}>
+							<NavLink
+								to='/blogs'
+								className={({ isActive }) =>
+									isActive ? 'nav_item_link active' : 'nav_item_link'
+								}
+								onClick={closeMenu}
+							>
 								Blogs
-							</Link>
+							</NavLink>
 						</li>
 
-						{/* Mobil versiyada login tugmalar ham menyuga tushadi */}
-						<div className='mobile_login_btn'>
-							<Link to='/signin' className='signIn_btn' onClick={closeMenu}>
+						{/* Mobil versiyada login tugmalar */}
+						<div className='mobile_login_btn '>
+							<NavLink to='/signin' className='signIn_btn' onClick={closeMenu}>
 								Sign In
-							</Link>
-							<Link to='/signup' className='signUp_btn' onClick={closeMenu}>
+							</NavLink>
+							<NavLink to='/signup' className='signUp_btn' onClick={closeMenu}>
 								Sign Up
-							</Link>
+							</NavLink>
 						</div>
 					</ol>
 				</nav>
-				{/* Navbar end */}
 
-				{/* Login buttons — faqat desktopda */}
+				{/* Login buttons — desktop uchun */}
 				<div className='login_btn'>
-					<Link to='/signin' className='signIn_btn'>
+					<NavLink to='/signin' className='signIn_btn'>
 						Sign In
-					</Link>
-					<Link to='/signup' className='signUp_btn'>
+					</NavLink>
+					<NavLink to='/signup' className='signUp_btn'>
 						Sign Up
-					</Link>
+					</NavLink>
 				</div>
 
 				{/* Hamburger icon */}

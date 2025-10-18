@@ -14,7 +14,7 @@
 	align-items: center;
 	justify-content: space-between;
 	// background-color: grey;
-	padding: 10px;
+	padding: 10px 0px;
 
 	.header_logo {
 		color: $header-logo;
@@ -28,6 +28,7 @@
 			display: flex;
 			align-items: center;
 			gap: 50px;
+			font-family: 'Work Sans', cursive;
 
 			.nav_item_link {
 				font-size: $first-font + 2;
@@ -70,10 +71,18 @@
 				&:active {
 					opacity: 0.6;
 				}
+
+				// 🔥 ACTIVE holat hover bilan bir xil bo‘lsin
+				&.active {
+					font-weight: 900;
+					color: lighten($full-white, 10%);
+					&::after {
+						transform: scaleX(1);
+					}
+				}
 			}
 		}
 	}
-	
 
 	.login_btn {
 		display: flex;

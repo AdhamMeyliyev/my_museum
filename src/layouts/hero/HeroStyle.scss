@@ -1,3 +1,69 @@
-.hero_main{
-	color: white;
+// Clicker Script font
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
+
+// Work Sans font
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+// Water Brush font
+@import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
+
+// Full Colors
+@import '/src/colors/FullColors.scss';
+
+// Full fonts
+@import '/src/fonts/FullFonts.scss';
+
+.container {
+	.hero_main {
+		margin-top: 100px;
+		color: white;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+
+		.hero_first_title {
+			font-size: 46px;
+			font-family: 'Water Brush', cursive;
+			line-height: 0px;
+			color: $full-white;
+			&::selection {
+				color: #ee1c45;
+			}
+		}
+
+		.hero_second_title {
+			font-size: 86px;
+			font-weight: bold;
+			font-family: 'Work Sans', sans-serif;
+			line-height: 0px;
+			font-family: 'Work Sans', sans-serif;
+			&::selection {
+				color: #ee1c45;
+			}
+		}
+
+		.hero_desc {
+			font-size: $first-font + 2;
+			line-height: 24px;
+			letter-spacing: 0%;
+			font-family: 'Work Sans', sans-serif;
+			width: 580px;
+
+			&::selection {
+				color: #ee1c45;
+			}
+		}
+
+		.location_date_container {
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			justify-content: space-around;
+			width: 500px;
+			height: 96px;
+			backdrop-filter: blur(12px);
+			background: rgba(0, 0, 0, 0.039); // shaffof qoraroq fon
+			border: 1px solid rgba(255, 255, 255, 0.15);
+		}
+	}
 }
